@@ -80,7 +80,7 @@ Discounts apply in order: **Coupon** → **On Top** → **Seasonal**
 ## Unit Tests
 สามารทดสอบระบบ (Unit Tests) ด้วยคำสั่ง:
 ```bash
-npm npm test
+npm test
 ```
 
 ### Postman Collection
