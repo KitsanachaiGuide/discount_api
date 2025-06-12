@@ -1,0 +1,22 @@
+[
+    {
+      "category": "Clothing",
+      "keywords": ["T-Shirt", "Shirt", "Hoodie", "Jacket", "Pants", "Shorts", "jeans", "dress", "shoes", "sneakers", "nike", "adidas", "clothing"]
+    },
+    {
+      "category": "Accessories",
+      "keywords": ["Hat", "Belt", "Bag", "Watch", "Sunglasses"]
+    },
+    {
+      "category": "Electronics",
+      "keywords": ["Watch", "Headphones", "Charger", "Cable", "laptop", "computer", "phone", "smartphone", "iphone", "samsung", "macbook", "airpods", "tv", "monitor"]
+    },
+    {
+      "category": "Gaming",
+      "keywords": ["gaming", "game", "mouse", "keyboard", "controller", "ps5", "xbox", "nintendo"]
+    },
+    {
+      "category": "Books",
+      "keywords": ["book", "novel", "magazine", "textbook", "ebook"]
+    }
+  ]

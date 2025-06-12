@@ -1,0 +1,490 @@
+Test Case 1: Fixed Amount Discount (Format แบบที่ 1)
+{
+  "cart": [
+    {
+      "name": "Laptop",
+      "price": 25000,
+      "quantity": 1,
+      "category": "Electronics" 
+    },
+    {
+      "name": "Mouse",
+      "price": 500,
+      "quantity": 2,
+      "category": "Electronics"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Fixed 1000 THB Off",
+      "type": "fixed_amount",
+      "category": "Coupon",
+      "params": {
+        "amount": 1000
+      },
+      "minimum_amount": 20000
+    }
+  ]
+}
+
+
+Test Case 2: Fixed Amount Discount (Format แบบที่ 2)
+{
+  "cart": [
+    {
+      "name": "Smartphone",
+      "price": 15000,
+      "quantity": 1,
+      "category": "Electronics"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Fixed 500 THB Off",
+      "type": "fixed_amount",
+      "category": "Coupon",
+      "discount_amount": 500,
+      "minimum_amount": 10000,
+      "maximum_discount": 1000
+    }
+  ]
+}
+
+
+Test Case 3: Percentage Discount (Format แบบที่ 1)
+{
+  "cart": [
+    {
+      "name": "T-Shirt",
+      "price": 800,
+      "quantity": 3,
+      "category": "Clothing"
+    },
+    {
+      "name": "Jeans",
+      "price": 1200,
+      "quantity": 2,
+      "category": "Clothing"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "10% Off Everything",
+      "type": "percentage",
+      "category": "Coupon",
+      "params": {
+        "percentage": 10
+      }
+    }
+  ]
+}
+
+
+Test Case 4: Percentage Discount (Format แบบที่ 2)
+{
+  "cart": [
+    {
+      "name": "Book",
+      "price": 350,
+      "quantity": 5,
+      "category": "Books"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "15% Off Books",
+      "type": "percentage",
+      "category": "Coupon",
+      "discount_percentage": 15,
+      "minimum_amount": 1000,
+      "maximum_discount": 500
+    }
+  ]
+}
+
+
+Test Case 5: Category Discount (Format แบบที่ 1)
+{
+  "cart": [
+    {
+      "name": "Laptop",
+      "price": 30000,
+      "quantity": 1,
+      "category": "Electronics"
+    },
+    {
+      "name": "Book",
+      "price": 300,
+      "quantity": 2,
+      "category": "Books"
+    },
+    {
+      "name": "Headphones",
+      "price": 2000,
+      "quantity": 1,
+      "category": "Electronics"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "20% Off Electronics",
+      "type": "category_percentage",
+      "category": "On Top",
+      "params": {
+        "category": "Electronics",
+        "amount": 20
+      }
+    }
+  ]
+}
+
+
+Test Case 6: Category Discount (Format แบบที่ 2)
+{
+  "cart": [
+    {
+      "name": "Dress",
+      "price": 1500,
+      "quantity": 2,
+      "category": "Clothing"
+    },
+    {
+      "name": "Shoes",
+      "price": 2500,
+      "quantity": 1,
+      "category": "Clothing"
+    },
+    {
+      "name": "Phone",
+      "price": 20000,
+      "quantity": 1,
+      "category": "Electronics"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "25% Off Clothing",
+      "type": "category_percentage",
+      "category": "On Top",
+      "applicable_categories": ["Clothing"],
+      "discount_percentage": 25,
+      "minimum_amount": 3000,
+      "maximum_discount": 2000
+    }
+  ]
+}
+
+
+Test Case 7: Points Discount (Format แบบที่ 1)
+{
+  "cart": [
+    {
+      "name": "Coffee",
+      "price": 150,
+      "quantity": 4,
+      "category": "Beverages"
+    },
+    {
+      "name": "Cake",
+      "price": 250,
+      "quantity": 2,
+      "category": "Food"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Use 100 Points",
+      "type": "points",
+      "category": "On Top",
+      "params": {
+        "customerPoints": 100
+      }
+    }
+  ]
+}
+
+
+Test Case 8: Points Discount (Format แบบที่2)
+{
+  "cart": [
+    {
+      "name": "Gaming Mouse",
+      "price": 2500,
+      "quantity": 1,
+      "category": "Gaming"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Use 300 Points",
+      "type": "points",
+      "category": "On Top",
+      "points_used": 300,
+      "maximum_discount": 400
+    }
+  ]
+}
+
+
+Test Case 9: Seasonal Discount (Format แบบที่ 1)
+{
+  "cart": [
+    {
+      "name": "Winter Coat",
+      "price": 3500,
+      "quantity": 1,
+      "category": "Clothing"
+    },
+    {
+      "name": "Boots",
+      "price": 2500,
+      "quantity": 1,
+      "category": "Clothing"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Every 1000 THB get 100 THB off",
+      "type": "seasonal",
+      "category": "Seasonal",
+      "params": {
+        "everyXTHB": 1000,
+        "discountYTHB": 100
+      }
+    }
+  ]
+}
+
+
+Test Case 10: Seasonal Discount (Format แบบที่ 2)
+{
+  "cart": [
+    {
+      "name": "Summer Dress",
+      "price": 1200,
+      "quantity": 2,
+      "category": "Clothing"
+    },
+    {
+      "name": "Sandals",
+      "price": 800,
+      "quantity": 1,
+      "category": "Clothing"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Summer Sale 30% Off",
+      "type": "seasonal",
+      "category": "Seasonal",
+      "discount_percentage": 30,
+      "start_date": "2025-06-01T00:00:00Z",
+      "end_date": "2025-08-31T23:59:59Z",
+      "minimum_amount": 2000
+    }
+  ]
+}
+
+
+Test Case 11: Multiple Campaigns (ทดสอบลำดับการคำนวณ)
+{
+  "cart": [
+    {
+      "name": "Laptop",
+      "price": 25000,
+      "quantity": 1,
+      "category": "Electronics"
+    },
+    {
+      "name": "Mouse",
+      "price": 500,
+      "quantity": 1,
+      "category": "Electronics"
+    },
+    {
+      "name": "Keyboard",
+      "price": 1500,
+      "quantity": 1,
+      "category": "Electronics"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Fixed 2000 THB Off",
+      "type": "fixed_amount",
+      "category": "Coupon",
+      "discount_amount": 2000,
+      "minimum_amount": 20000
+    },
+    {
+      "name": "15% Off Electronics",
+      "type": "category_percentage",
+      "category": "On Top",
+      "applicable_categories": ["Electronics"],
+      "discount_percentage": 15
+    },
+    {
+      "name": "Seasonal 10% Off",
+      "type": "seasonal",
+      "category": "Seasonal",
+      "discount_percentage": 10,
+      "start_date": "2025-06-01T00:00:00Z",
+      "end_date": "2025-12-31T23:59:59Z"
+    }
+  ]
+}
+
+
+Test Case 12: Empty Cart
+{
+  "cart": [],
+  "campaigns": [
+    {
+      "name": "10% Off",
+      "type": "percentage",
+      "category": "Coupon",
+      "discount_percentage": 10
+    }
+  ]
+}
+
+
+Test Case 13: No Campaigns
+{
+  "cart": [
+    {
+      "name": "Product",
+      "price": 1000,
+      "quantity": 1,
+      "category": "General"
+    }
+  ],
+  "campaigns": []
+}
+
+
+Test Case 14: Maximum Discount Limit Test
+{
+  "cart": [
+    {
+      "name": "Expensive Item",
+      "price": 50000,
+      "quantity": 1,
+      "category": "Luxury"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "50% Off with Max 5000 THB",
+      "type": "percentage",
+      "category": "Coupon",
+      "discount_percentage": 50,
+      "maximum_discount": 5000
+    }
+  ]
+}
+
+
+Test Case 15: Minimum Amount Not Met
+{
+  "cart": [
+    {
+      "name": "Cheap Item",
+      "price": 100,
+      "quantity": 1,
+      "category": "General"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "1000 THB Off",
+      "type": "fixed_amount",
+      "category": "Coupon",
+      "discount_amount": 1000,
+      "minimum_amount": 5000
+    }
+  ]
+}
+
+
+Test Case 17: ทดสอบ Fuzzy Matching กับสินค้าที่มีชื่อใกล้เคียง
+{
+  "cart": [
+    {
+      "name": "Laptop Gaming",
+      "price": 45000,
+      "quantity": 1
+    },
+    {
+      "name": "Gaming Mouse",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "name": "Mechanical Keyboard",
+      "price": 3500,
+      "quantity": 1
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "15% Off Gaming",
+      "type": "category_percentage",
+      "category": "On Top",
+      "applicable_categories": ["Gaming", "Electronics"],
+      "discount_percentage": 15
+    }
+  ]
+}
+
+
+Test Case 18: ทดสอบกับสินค้าที่อาจมี Typos 
+{
+  "cart": [
+    {
+      "name": "Iphone 14",
+      "price": 30000,
+      "quantity": 1
+    },
+    {
+      "name": "Samung Galaxy",
+      "price": 25000,
+      "quantity": 1
+    },
+    {
+      "name": "Macbok Air",
+      "price": 40000,
+      "quantity": 1
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "10% Off Smartphones",
+      "type": "category_percentage",
+      "category": "On Top",
+      "applicable_categories": ["Electronics", "Smartphones"],
+      "discount_percentage": 10
+    }
+  ]
+}
+
+
+Test Case 20: ทดสอบ Validation - Invalid Request
+{
+  "cart": [],
+  "campaigns": "invalid_campaigns"
+}
+
+
+Test Case 21: ทดสอบ Validation - Missing Required Fields
+{
+  "campaigns": [
+    {
+      "name": "Test Campaign",
+      "type": "percentage",
+      "category": "Coupon",
+      "discount_percentage": 10
+    }
+  ]
+}
+
